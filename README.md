@@ -14,7 +14,7 @@ The project also demonstrates practical work with GNS3 VMs, Cisco IOSv/IOL2 imag
 
 ## **Topology Diagram**
 
-![](images/Pasted%20image%2020251121005342.png)
+
 
 <br>
 
