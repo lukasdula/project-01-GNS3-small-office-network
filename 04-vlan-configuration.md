@@ -354,4 +354,5 @@ The Layer 2 topology is fully prepared for the implementation of inter-VLAN rout
 ---
 
 <br>
+
 **Next chapter:** [Inter-VLAN Routing](05-inter-vlan-routing.md)
