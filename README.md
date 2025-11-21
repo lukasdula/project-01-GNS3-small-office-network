@@ -111,7 +111,7 @@ The network is divided into several simple functional zones:
 
 ## **Author’s Note**
 
-This is my **first** GNS3 project, and building it was an important step forward in my networking studies.  
+This is my first GNS3 project, and building it was an important step forward in my networking studies.  
 Before this project, I completed several GNS3 labs, which helped me understand the environment, but creating a full multi-device topology was something completely new.
 
 During the work, I solved real issues such as VLAN issues, incorrect trunking, NAT/PAT translation problems and wrong ACL rules. Fixing these issues made the project more realistic and gave me a stronger understanding of how routing, switching and services work together in a virtual environment.
