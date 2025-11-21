@@ -307,4 +307,4 @@ This chapter defines the DHCP service for all client VLANs and prepares the Wind
 
 <br>
 
-**Next chapter:**
+**Next chapter:** [NAT/PAT and Static Routing](07-nat-pat-and-static-routing.md)
