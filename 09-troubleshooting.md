@@ -18,7 +18,7 @@ This chapter documents the real problems that appeared in the project and demons
 
 <br>
 
-## **9.2 – Missing VLANs on SW2**
+## **9.2 - Missing VLANs on SW2**
 
 ### **Issue**  
 
