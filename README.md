@@ -39,25 +39,25 @@ The network is divided into several simple functional zones:
 
 ## **Project Structure**
 
-1. Network Topology and Devices
+1. [Network Topology and Devices](01-network-topology-and-devices.md)
     
-2. Addressing and VLAN Planning
+2. [Addressing and VLAN Planning](02-addressing-and-vlan-planning.md)
     
-3. Basic Device Configuration
+3. [Basic Device Configuration](03-basic-device-configuration.md)
     
-4. VLAN Configuration
+4. [VLAN Configuration](04-vlan-configuration.md)
     
-5. Inter-VLAN Routing
+5. [Inter-VLAN Routing](05-inter-vlan-routing.md)
     
-6. DHCP Configuration
+6. [DHCP Configuration](06-dhcp-configuration.md)
     
-7. NAT/PAT and Static Routing 
+7. [NAT/PAT and Static Routing](07-nat-pat-and-static-routing.md) 
     
-8. Network Security
+8. [Network Security](08-network-security.md)
     
-9. Troubleshooting
+9. [Troubleshooting](09-troubleshooting.md)
     
-10. Conclusion and Summary
+10. [Conclusion and Summary](10-conclusion-and-summary.md)
     
 
 <br>
