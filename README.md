@@ -5,7 +5,7 @@
 ## **Introduction and Objectives**
 
 This project presents a complete small office network built in GNS3, designed as part of my study portfolio and my first full infrastructure project in a virtualized GNS3 environment. 
-The network uses **VLAN segmentation**, **inter-VLAN routing**, **static routing with ip route**, **DHCP services**, **NAT/PAT translation**, and **ACL security rules**. Basic device security, SSH access, port roles, and controlled communication between VLAN segments are also included.. All implemented functions follow the design and the network operates as one stable and functional system.
+The network uses VLAN segmentation, inter-VLAN routing, static routing with ip route, DHCP services, NAT/PAT translation, and ACL security rules. Basic device security, SSH access, port roles, and controlled communication between VLAN segments are also included.. All implemented functions follow the design and the network operates as one stable and functional system.
 
 The goal of the project is to simulate a realistic small office environment with separated VLAN areas, Windows Server services, private-to-public translation, and managed access between segments.  
 The project also demonstrates practical work with GNS3 VMs, Cisco IOSv/IOL2 images, and system-level troubleshooting inside a virtual network topology.
