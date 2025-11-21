@@ -263,4 +263,4 @@ The network now has a stable and fully operational foundation for the upcoming c
 
 <br>
 
-**Next chapter:**
+**Next chapter:** [VLAN Configuration](04-vlan-configuration.md)
