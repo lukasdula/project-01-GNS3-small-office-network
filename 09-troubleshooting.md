@@ -604,7 +604,7 @@ Traffic from Guest VLAN 30 to the internal Windows Server (192.168.10.10) now wo
 
 <br>
 
-### **9.4 Conclusion**
+### **9.6 Conclusion**
 
 This chapter tested and fixed common network issues. Problems with VLANs, trunk ports, NAT, and ACLs were found, analyzed, and corrected. Using commands like `show vlan`, `show interfaces trunk`, `show ip nat translations`, and `show access-lists`, the whole network was verified. After all fixes, every VLAN and NAT connection works, ACL rules are correct, and the network is fully stable and functional.
 
