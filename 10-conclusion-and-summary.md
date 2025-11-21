@@ -25,19 +25,19 @@ The network is fully built with all planned functions. It forms a complete small
 ## **Project Overview**
 
 
-1. [Network Topology and Devices](01-network-topology-and-devices.md) : The network uses Router R1, an ISP router, three switches, a Windows Server, a Windows-Admin workstation and several user devices. All devices are placed in separate VLAN segments.
+1. [Network Topology and Devices](01-network-topology-and-devices.md): The network uses Router R1, an ISP router, three switches, a Windows Server, a Windows-Admin workstation and several user devices. All devices are placed in separate VLAN segments.
 
-2. [Addressing and VLAN Planning](02-addressing-and-vlan-planning.md) : Each VLAN receives a dedicated IPv4 subnet. The addressing plan defines gateways, DHCP scope and the point-to-point link toward the ISP.
+2. [Addressing and VLAN Planning](02-addressing-and-vlan-planning.md): Each VLAN receives a dedicated IPv4 subnet. The addressing plan defines gateways, DHCP scope and the point-to-point link toward the ISP.
 
-3. [Basic Device Configuration](03-basic-device-configuration.md) : Hostnames, static addressing and basic connectivity are configured. Windows Server and Windows-Admin form the management part of the network.
+3. [Basic Device Configuration](03-basic-device-configuration.md): Hostnames, static addressing and basic connectivity are configured. Windows Server and Windows-Admin form the management part of the network.
 
-4. [VLAN Configuration](04-vlan-configuration.md) : All switches create VLANs and assign access ports. Trunk ports carry VLANs across the switching layer two.
+4. [VLAN Configuration](04-vlan-configuration.md): All switches create VLANs and assign access ports. Trunk ports carry VLANs across the switching layer two.
 
-5. [Inter-VLAN Routing](05-inter-vlan-routing.md) : Router R1 uses 802.1Q subinterfaces and provides gateway addresses for each segment.
+5. [Inter-VLAN Routing](05-inter-vlan-routing.md): Router R1 uses 802.1Q subinterfaces and provides gateway addresses for each segment.
 
-6. [DHCP Configuration](06-dhcp-configuration.md) : Windows Server assigns DHCP addresses. R1 forwards DHCP requests from all VLANs using relay.
+6. [DHCP Configuration](06-dhcp-configuration.md): Windows Server assigns DHCP addresses. R1 forwards DHCP requests from all VLANs using relay.
 
-7. [NAT/PAT and Static Routing](07-nat-pat-and-static-routing.md) : R1 uses a default route to the ISP. The ISP router returns all internal networks with _ip route_. NAT/PAT translates internal addresses to the public address of R1.
+7. [NAT/PAT and Static Routing](07-nat-pat-and-static-routing.md): R1 uses a default route to the ISP. The ISP router returns all internal networks with _ip route_. NAT/PAT translates internal addresses to the public address of R1.
 
 8. [Network Security](08-network-security.md): Device protection, port security, SSH and ACL policies define the security structure. Admin VLANs have full access; user VLANs stay isolated.
 
