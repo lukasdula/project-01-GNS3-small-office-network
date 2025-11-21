@@ -171,5 +171,5 @@ This chapter establishes full inter-VLAN routing across the network. The router 
 
 <br>
 
-**Next chapter:**
+**Next chapter:** [DHCP Configuration](06-dhcp-configuration.md)
 
