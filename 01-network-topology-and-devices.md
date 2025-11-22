@@ -1,79 +1,90 @@
 
+<br>
+
 # **1 - Network Topology and Devices**
 
-<br>
 
-## **1.1 Network Topology and Devices**
+## 1.1 Network Topology and Devices
 
-This first chapter presents a structured small office network built from one router, three switches and several user segments. The design separates internal hosts, management devices and server infrastructure into clear logical zones. Routing, switching and basic services follow a simple layout, so each part of the network has a specific role. 
+This first chapter introduces the structured medium-sized company network used in this project. The design organizes all hosts, servers and user groups into separate logical zones, each connected through two core routers. Switching, routing and basic services follow a clear layout so that every part of the environment has a defined role.
 
-All zones are connected through the core router, which forwards traffic between internal segments and the ISP. The next sections describe the topology diagram, the device list and all physical connections used in this project.
+All internal segments connect to the core routing layer, which provides inter-VLAN routing and forwards external traffic to the ISP. The following sections describe the topology diagram, network zones, device list and all physical connections used in this project.
 
-<br>
+## 1.2 Topology Diagram
 
-## **1.2 Topology Diagram**
+![](images/Pasted%20image%2020251122141916.png)
 
-![](images/Pasted%20image%2020251116205854.png)
+## 1.3 Network Zones
 
-<br>
+The topology is divided into the following areas:
 
-## **1.3 Network Zones**
-
-**The topology is organized into these areas:**
-
-- ISP and internet access
+- **ISP and internet access**
     
-- Core routing and switching
+- **Core routing layer** (R1 and R2)
     
-- Server and administrator segment
+- **Administration zone** (Xubuntu-Admin)
     
-- Multiple workstation groups
+- **Server zone** (Xubuntu-Server)
     
-- Isolated guest area
+- **Executive zone** (PC1-Executive)
+    
+- **Development zone** (PC2-Development, PC3-Development)
+    
+- **Finance zone** (PC4-Finance)
+    
+- **Logistic zone** (PC5-Logistic)
+    
+- **Warehouse zone** (PC6-Warehouse)
+    
+- **Sales zone** (PC7-Sales)
+    
+- **Printer zone** (Printer)
+    
+- **Network management zone** (VLAN 99)
+    
 
-<br>
+## 1.4 Used Devices
 
-## **1.4 Used Devices**
+|Device|Image / Type|Interfaces|Access|Purpose|
+|---|---|---|---|---|
+|Router R1|Cisco IOSv|6x GigabitEthernet|Telnet|Core routing device; inter-VLAN routing; uplink to ISP.|
+|Router R2|Cisco IOSv|6x GigabitEthernet|Telnet|Secondary routing device; distribution for lower access switches.|
+|ISP Router|Cisco IOSv|6x GigabitEthernet|Telnet|Point-to-point link to R1 and simulated WAN access.|
+|Switches SW1–SW5|Cisco IOSv-L2|4x Ethernet each|Telnet|Layer 2 switching; access ports and trunk links.|
+|Xubuntu-Admin|QEMU Xubuntu VM|1x GigabitEthernet|VNC|Administration workstation for network management.|
+|Xubuntu-Server|QEMU Xubuntu VM|1x GigabitEthernet|VNC|Internal server for DHCP, DNS and other services.|
+|PC1–PC7|VPCS Hosts|1x Ethernet|Console|Workstations placed in various departmental VLANs.|
+|Printer|GNS3 Printer|1x Ethernet|Console|Network printer in a dedicated VLAN.|
+|Internet Host|VPCS|1x Ethernet|Console|Simulated external host for NAT/PAT verification.|
 
-| **Device**                      | **Image / Type**                                       | **Interfaces**                     | **Connection** | **Purpose**                                                                         |
-| :------------------------------ | :----------------------------------------------------- | :--------------------------------- | :------------- | :---------------------------------------------------------------------------------- |
-| **Router R1**                   | Cisco vIOS (vios-adventerprisek9-m.spa.159-3.m6.qcow2) | 6 adapters (GigabitEthernet ports) | Telnet         | Layer 3 routing device; inter-VLAN routing; NAT/PAT; gateway to ISP.                |
-| **ISP Router**                  | Cisco vIOS (same image)                                | 6 adapters (GigabitEthernet ports) | Telnet         | Layer 3 routing device; simulated ISP router providing WAN access.                  |
-| **Switches SW1–SW3**            | Cisco vIOS-L2 (viosl2-adventerprisek9-m-15.2)          | 4 adapters (Ethernet) each         | Telnet         | Layer 2 switching; access ports and trunk links across host segments.               |
-| **Windows-Admin / Windows-PC6** | Windows 10 Enterprise VM                               | 1 adapter (Ethernet)               | VNC            | Full workstation for administration, management and troubleshooting with testing.   |
-| **Windows-Server**              | Windows Server 2022 VM                                 | 1 adapter (Ethernet)               | VNC            | Provides DHCP services only.                                                        |
-| **VPCS Clients (PC1–PC5)**      | Default GNS3 VPCS host                                 | 1 adapter (Ethernet)               | Native console | Lightweight hosts placed in different VLANs for DHCP, inter-VLAN and routing tests. |
-| **Internet Host**               | GNS3 built-in VPCS                                     | 1 adapter (Ethernet)               | Native console | External host used to verify NAT/PAT and internet-edge connectivity.                |
+## 1.5 Connection Overview
 
-<br>
+|Device|Interface|Connected to →|Peer Interface|Purpose|
+|---|---|---|---|---|
+|ISP Router|Gi0/1|Internet Host|e0|Connection to simulated external host|
+|ISP Router|Gi0/0|R1|Gi0/5|WAN link to core router R1|
+|R1|Gi0/1|SW1|Gi0/1|Uplink to switch handling server and admin zones|
+|R1|Gi0/4|SW4|Gi0/0|Uplink to SW4 for Finance and Printer segments|
+|R1|Gi0/5|ISP Router|Gi0/0|Outbound link to ISP|
+|R2|Gi0/0|R1|Gi0/0|Routing link between R1 and R2|
+|R2|Gi0/2|SW2|Gi0/2|Uplink for Admin and upper-layer access|
+|R2|Gi0/3|SW3|Gi0/3|Uplink for Executive and Development segments|
+|SW1|Gi0/0|Xubuntu-Server|e0|Access link for server VM|
+|SW1|Gi0/3|Xubuntu-Admin|e0|Access link for admin workstation|
+|SW2|Gi0/0|Xubuntu-Admin|e0|Access link for admin workstation (as shown in diagram)|
+|SW3|Gi0/0|PC1-Executive|e0|Access link for executive workstation|
+|SW3|Gi0/1|PC2-Development|e0|Access link for development workstation|
+|SW3|Gi0/2|PC3-Development|e0|Access link for development workstation|
+|SW4|Gi0/1|PC4-Finance|e0|Access link for finance department|
+|SW4|Gi0/2|PC5-Logistic|e0|Access link for logistic department|
+|SW4|Gi0/3|SW5|Gi0/3|Switch-to-switch uplink for warehouse and sales segments|
+|SW5|Gi0/1|Printer-1|e0|Access link for network printer|
+|SW5|Gi0/2|PC6-Warehouse|e0|Access link for warehouse workstation|
+|SW5|Gi0/0|PC7-Sales|e0|Access link for sales department|
 
-## **1.5 Topology Overview**
+## 1.6 Conclusion
 
-| **Device** | **Interface** | **Connected to ->** | **Peer Interface** | **Purpose**                                                               |
-| :--------- | :------------ | :------------------ | :----------------- | :------------------------------------------------------------------------ |
-| ISP Router | Gi0/0         | Router R1           | Gi0/0              | Point-to-point link between ISP router and edge router R1.                |
-| ISP Router | Gi0/1         | Internet Host       | e0                 | Connection to simulated external host representing the internet.          |
-| Router R1  | Gi0/1         | Switch SW1          | Gi0/1              | Downlink from R1 to access switch for server, admin and PC1 management.   |
-| Router R1  | Gi0/2         | Switch SW2          | Gi0/2              | Downlink from R1 to access switch for PC2 and PC3 segment.                |
-| Switch SW2 | Gi0/0         | Switch SW3          | Gi0/0              | Switch-to-switch uplink between SW2 and SW3 for PC4, PC5 and Windows-PC6. |
-| Switch SW1 | Gi0/0         | Windows-Server      | Ethernet0          | Access link for DHCP server.                                              |
-| Switch SW1 | Gi0/3         | Windows-Admin       | Ethernet0          | Access link for admin workstation.                                        |
-| Switch SW1 | Gi0/2         | PC1                 | e0                 | Access link for user PC1.                                                 |
-| Switch SW2 | Gi0/1         | PC2                 | e0                 | Access link for user PC2.                                                 |
-| Switch SW2 | Gi0/3         | PC3                 | e0                 | Access link for user PC3.                                                 |
-| Switch SW3 | Gi0/1         | PC5                 | e0                 | Access link for user PC5.                                                 |
-| Switch SW3 | Gi0/2         | PC4                 | e0                 | Access link for user PC4.                                                 |
-| Switch SW3 | Gi0/3         | Windows-PC6         | Ethernet0          | Access link for Windows test workstation.                                 |
-<br>
+This chapter defines the medium-sized company network and summarizes all devices used in the topology. It presents the physical layout, the logical separation of user groups, and the roles of every router, switch and host. The structured segmentation establishes a clear starting point for configuration and verification.
 
-## **1.6 Conclusion**
-
-This chapter defines the structure of the network and identifies all devices used in the topology. It presents the physical layout, the logical zones and the roles of each router, switch and host. The device list clarifies how different platforms operate in the environment, and the connection overview shows how every segment links to the core router and the simulated internet. Together, these elements establish a clear foundation for the configuration and operation of the network.
-
-
----
-
-<br>
-
-**Next chapter:** [Addressing and VLAN Planning](02-addressing-and-vlan-planning.md)
+The following chapter -> **02-addressing-and-vlan-planning**, introduces the subnet allocation, VLAN mapping and gateway structure for all segments. Subsequent chapters build on this plan through switching features, routing, core services and security.
 
