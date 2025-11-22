@@ -62,4 +62,4 @@ With this design in place, the network is ready for the implementation of switch
 
 <br>
 
-**Next chapter:**
+**Next chapter:** [Basic Device Configuration](03-basic-device-configuration.md)
