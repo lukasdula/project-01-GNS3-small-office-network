@@ -75,5 +75,5 @@ This chapter defines the structure of the network and identifies all devices use
 
 <br>
 
-**Next chapter:**
+**Next chapter:** [Addressing and VLAN Planning](02-addressing-and-vlan-planning.md)
 
