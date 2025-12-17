@@ -14,7 +14,7 @@ Routing and subinterfaces are not configured in this chapter. Inter-VLAN routing
 
 ## **4.2 Topology Diagram**
 
-![](images/Pasted%20image%2020251117055655.png)
+![](images/Pasted%20image%2020251217025615.png)
 
 <br>
 
