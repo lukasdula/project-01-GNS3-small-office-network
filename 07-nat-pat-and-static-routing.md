@@ -10,7 +10,7 @@ This chapter defines NAT, PAT and static routing on Router R1 and the ISP router
 
 ## **7.2 Topology Diagram**
 
-![](images/Pasted%20image%2020251118042020.png)
+![](images/Pasted%20image%2020251217030626.png)
 
 <br>
 
