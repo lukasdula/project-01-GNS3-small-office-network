@@ -15,7 +15,7 @@ This setup enables automatic addressing for all user segments and prepares the n
 
 ## **6.2 Topology Diagram**
 
-![](images/Pasted%20image%2020251118000704.png)
+![](images/Pasted%20image%2020251217030304.png)
 
 <br>
 
