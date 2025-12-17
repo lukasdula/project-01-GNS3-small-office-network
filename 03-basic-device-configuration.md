@@ -16,7 +16,7 @@ The goal of this chapter is to establish a clean baseline that prepares the netw
 ## **3.2 Topology Diagram**
 
 
-![](images/Pasted%20image%2020251117020533.png)
+![](images/Pasted%20image%2020251217024906.png)
 
 <br>
 
