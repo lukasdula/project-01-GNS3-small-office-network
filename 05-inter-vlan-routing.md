@@ -13,7 +13,7 @@ Subinterfaces are created on R1 for each VLAN, 802.1Q encapsulation is applied, 
 
 ## **5.2 Topology Diagram**
 
-![](images/Pasted%20image%2020251117161953.png)
+![](images/Pasted%20image%2020251217025957.png)
 
 <br>
 
