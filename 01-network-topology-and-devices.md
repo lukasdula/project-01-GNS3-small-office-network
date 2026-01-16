@@ -9,6 +9,8 @@ This first chapter presents a structured small office network built from one rou
 
 All zones are connected through the core router, which forwards traffic between internal segments and the ISP. The next sections describe the topology diagram, the device list and all physical connections used in this project.
 
+>**Note.:** Due to limitations of Cisco virtual switch images in GNS3, the lab uses a reduced number of switch interfaces. This configuration logic is applied across the network.
+
 <br>
 
 ## **1.2 Topology Diagram**
