@@ -24,7 +24,7 @@ The network is fully built with all planned functions. It forms a complete small
 
 ## **Topology Diagram**
 
-
+![](images/Pasted%20image%2020260125051832.png)
 
 <br>
 
