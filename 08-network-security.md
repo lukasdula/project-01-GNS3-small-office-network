@@ -12,7 +12,7 @@ After that, Access Control Lists define which VLANs can communicate. Guest traff
 
 ## **8.2 Topology Diagram**
 
-![](images/Pasted%20image%2020251217030914.png)
+![](images/Pasted%20image%2020260125051549.png)
 
 <br>
 
