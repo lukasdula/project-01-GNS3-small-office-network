@@ -15,7 +15,7 @@ All zones are connected through the core router, which forwards traffic between 
 
 ## **1.2 Topology Diagram**
 
-![](images/Pasted%20image%2020251217024425.png)
+![](images/Pasted%20image%2020260125042316.png)
 
 <br>
 
