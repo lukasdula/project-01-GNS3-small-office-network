@@ -15,7 +15,7 @@ The project also demonstrates practical work with GNS3 VMs, Cisco IOSv/IOU-L2 im
 
 ## **Topology Diagram**
 
-![](images/Pasted%20image%2020251217023703.png)
+![](images/Pasted%20image%2020260125041246.png)
 
 
 <br>
