@@ -64,6 +64,28 @@ The network is divided into several simple functional zones:
 
 <br>
 
+## **Key Project Features**
+
+* Static routing with ip route
+    
+- VLAN segmentation and Trunk links 
+    
+- Inter-VLAN routing using subinterfaces
+    
+* DHCP relay from all VLANs to Windows Server
+    
+- NAT/PAT translation to the public address of R1
+    
+* Basic security (passwords, enable secret, SSH access)
+    
+- Structured ACL policy controlling communication between VLAN segments
+    
+- Connectivity testing across all networks with full diagnostics steps
+    
+- Troubleshooting demonstrations (VLAN issues, wrong trunk, NAT mismatch, ACL order)
+
+<br>
+    
 ## **Used Tools**
 
 - **GNS3 version 2.2.54**
@@ -85,29 +107,6 @@ The network is divided into several simple functional zones:
 - **Obsidian** (notes, summaries and screenshots)
     
 
-
-<br>
-
-## **Key Project Features**
-
-* Static routing with ip route
-    
-- VLAN segmentation and Trunk links 
-    
-- Inter-VLAN routing using subinterfaces
-    
-* DHCP relay from all VLANs to Windows Server
-    
-- NAT/PAT translation to the public address of R1
-    
-* Basic security (passwords, enable secret, SSH access)
-    
-- Structured ACL policy controlling communication between VLAN segments
-    
-- Connectivity testing across all networks with full diagnostics steps
-    
-- Troubleshooting demonstrations (VLAN issues, wrong trunk, NAT mismatch, ACL order)
-    
 
 <br>
 
